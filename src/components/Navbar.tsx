@@ -10,8 +10,8 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
-    <div className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto flex justify-between items-center h-16 sm:h-20">
+    <div className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 w-full">
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-16 sm:h-20 w-full">
         {/* Desktop Layout - Three Section Layout */}
         <div className="hidden lg:flex items-center w-full">
           {/* Left - Logo */}
@@ -84,7 +84,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="lg:hidden flex items-center justify-between w-full">
+        <div className="lg:hidden flex items-center justify-between w-full max-w-full">
           {/* Mobile Logo */}
           <motion.span
             initial={{ opacity: 0, y: -20 }}
@@ -101,7 +101,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             onClick={toggleMenu}
-            className="p-2 sm:p-3 rounded-xl hover:bg-white/20 backdrop-blur-sm border border-transparent hover:border-white/30 transition-colors duration-300"
+            className="p-2 sm:p-3 rounded-xl hover:bg-white/20 backdrop-blur-sm border border-transparent hover:border-white/30 transition-colors duration-300 z-50"
           >
             {isMenuOpen ? (
               <X className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
@@ -119,7 +119,7 @@ export default function Navbar() {
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden bg-white/20 backdrop-blur-3xl border border-white/40 mt-2 sm:mt-4 rounded-xl shadow-lg mx-4 sm:mx-0"
+          className="lg:hidden bg-white/20 backdrop-blur-3xl border border-white/40 mt-2 sm:mt-4 rounded-xl shadow-lg mx-4 sm:mx-0 absolute top-full left-0 right-0 z-40"
         >
           <div className="px-4 sm:px-6 pt-4 sm:pt-6 pb-6 sm:pb-8 space-y-4 sm:space-y-6">
             {/* Navigation Links */}

@@ -9,7 +9,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#E9E3DF] text-gray-900 relative">
+    <footer className="bg-[#E9E3DF] text-gray-900 relative w-full overflow-x-hidden">
       {/* Orange spotlight at bottom */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-96 h-32 bg-orange-400/20 rounded-full blur-3xl"></div>
       

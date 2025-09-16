@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   background-color: #E9E3DF;
 }
@@ -25,6 +30,7 @@ body {
 
 * {
   border-color: hsl(var(--border));
+  box-sizing: border-box;
 }
 
 body {
@@ -37,4 +43,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Swiper Custom Styles */
+.swiper-pagination-mobile {
+  position: static !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.swiper-pagination-mobile .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  margin: 0 !important;
+}
+
+.swiper-pagination-mobile .swiper-pagination-bullet-active {
+  background: #3b82f6;
+  transform: scale(1.2);
 }

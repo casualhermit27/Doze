@@ -51,7 +51,7 @@ export default function PricingSection() {
   ]
 
   return (
-    <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-white/10">
+    <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-white/10 w-full overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
